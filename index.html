@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fabis Ausredengenerator</title>
+        <meta name="description" content="Ausredengenerator à la Fabian S.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="images/icons/icon-16x16.png">
+        <link rel="icon" href="images/icons/icon-32x32.png">
+        <link rel="icon" href="images/icons/icon-96x96.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-72x72.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-96x96.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-128x128.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-144x144.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+        <link rel="apple-touch-icon" href="images/icons/icon-160x160.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#db4938">
+        <meta name="theme-color" content="#db4938">
+
+        <style>
+            @media(prefers-color-scheme: dark) {
+                body, html {
+                    background: #333;
+                    color: white;
+                }
+            }
+
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            #content {
+                font-family: "Verdana", sans-serif;
+                text-align: center;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 80vh;
+            }
+
+            #question {
+                font-size: large;
+            }
+
+            #excuse {
+                font-size: xx-large;
+            }
+
+            #author {
+                font-size: medium;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h1 id="question">Mal wieder zu spät? Versuchs doch mal damit:</h1>
+            <div id="excuse"></div>
+            <div id="author"></div>
+        </div>
+
+        <script>
+            const excuses = [
+                "I muss no zom Friseur",
+                "I muss no dia Epfel fudd fiehra",
+                "I sodd no Epfel klauba",
+                "I dua no tanka",
+                "I muss no mitm Hond naus",
+                "I sodd no d'Oma hoim fiehra",
+                "I benn doch scho en Nellanga",
+                "I gang no pomba",
+                "I komm noch zehne",
+                "I muss no dr Chrischdbaum schmügga",
+                "I komm en zehn Minuda"
+            ];
+
+            const authors = [
+                "- Fabian S.",
+                "- F. Schimanski",
+                "- Unbekannt"
+            ];
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var excuse = excuses[Math.floor(Math.random() * excuses.length)];
+                var author = authors[Math.floor(Math.random() * authors.length)];
+
+                var excuse_div = document.getElementById("excuse");
+                var author_div = document.getElementById("author");
+
+                excuse_div.innerHTML = excuse;
+                author_div.innerHTML = author;
+
+            });
+        </script>
+    </body>
+</html>
