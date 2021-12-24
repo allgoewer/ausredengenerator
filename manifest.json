@@ -1,7 +1,7 @@
 {
-  "name": "Hat Jule heute Geburtstag?",
-  "short_name": "Jules Geburtstag",
-  "description": "Hier gibt es die Antwort auf DIE Frage: Hat Jule heute Geburtstag?",
+  "name": "Ausredengenerator à la Fabian S.",
+  "short_name": "Fabis Ausredengenerator",
+  "description": "Wenn mans mal wieder nicht rechtzeitig in die Bude schafft..",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#333",
